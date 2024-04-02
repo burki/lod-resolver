@@ -15,16 +15,16 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;;
  *
  * Therefore always return 404
  *
- * @Route("/seealso/findbuch")
  */
+#[Route('/seealso/findbuch')]
 class SeeAlsoFindbuchController
 extends AbstractController
 {
     const FINDBUCH_SEEALSO_URL = 'http://beacon.findbuch.de';
 
     /**
-     * @Route("{path}", requirements={"path": ".+"}, name="findbuch-proxy")
      */
+    #[Route('{path}', name: 'findbuch-proxy', requirements: ['path' => '.+'])]
     public function seeAlsoFindbuchAction(Request $request, $path)
     {
         throw $this->createNotFoundException(self::FINDBUCH_SEEALSO_URL . ' no longer works');
