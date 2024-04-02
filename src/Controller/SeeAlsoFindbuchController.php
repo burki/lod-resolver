@@ -1,5 +1,5 @@
 <?php
-// src/Controller/SeeAlsoFindbuch.php
+// src/Controller/SeeAlsoFindbuchController.php
 
 namespace App\Controller;
 
@@ -12,7 +12,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;;
 
 /**
  * http://beacon.findbuch.de/ no longer works.
- * 
+ *
  * Therefore always return 404
  *
  * @Route("/seealso/findbuch")
