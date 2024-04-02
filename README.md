@@ -5,14 +5,17 @@ This is the initial code for looking up related links based on LOD identifiers
 
 Status
 ------
-This service is still very much work in progress and currently only working
-around an expired certificate of https://beacon.findbuch.de/
+This service is still very much work in progress.
+
+As a proof of concept, it provides a SeeAlso-Service (https://verbundwiki.gbv.de/display/VZG/SeeAlso)
+based on Entity Facts (https://www.dnb.de/EN/Professionell/Metadatendienste/Datenbezug/Entity-Facts/entityFacts_node.html)
+at /seealso/entityfacts/gnd?id={GND]
 
 Installation
 ------------
 ### Requirements
 
-- PHP 7.3 or higher
+- PHP 8.1 or higher
 
 ### Fetch dependencies
 
@@ -32,7 +35,7 @@ License
 -------
     Linked Open Data Resolver
 
-    (C) 2023 Daniel Burckhardt
+    (C) 2024 Daniel Burckhardt
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as
