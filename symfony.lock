@@ -127,9 +127,6 @@
     "symfony/polyfill-mbstring": {
         "version": "v1.10.0"
     },
-    "symfony/polyfill-php80": {
-        "version": "v1.17.1"
-    },
     "symfony/routing": {
         "version": "6.4",
         "recipe": {
