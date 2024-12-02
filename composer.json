@@ -7,14 +7,14 @@
         "ext-iconv": "*",
         "sweetrdf/easyrdf": "^1.8",
         "symfony/apache-pack": "^1.0",
-        "symfony/console": "7.1.*",
-        "symfony/dom-crawler": "7.1.*",
-        "symfony/dotenv": "7.1.*",
+        "symfony/console": "7.2.*",
+        "symfony/dom-crawler": "7.2.*",
+        "symfony/dotenv": "7.2.*",
         "symfony/flex": "^1.17 || ^2.0",
-        "symfony/framework-bundle": "7.1.*",
-        "symfony/http-client": "7.1.*",
-        "symfony/runtime": "7.1.*",
-        "symfony/yaml": "7.1.*"
+        "symfony/framework-bundle": "7.2.*",
+        "symfony/http-client": "7.2.*",
+        "symfony/runtime": "7.2.*",
+        "symfony/yaml": "7.2.*"
     },
     "config": {
         "platform": {
@@ -62,7 +62,7 @@
     "extra": {
         "symfony": {
             "allow-contrib": false,
-            "require": "7.1.*"
+            "require": "7.2.*"
         }
     }
 }
