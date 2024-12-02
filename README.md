@@ -7,15 +7,19 @@ Status
 ------
 This service is still very much work in progress.
 
-As a proof of concept, it provides a SeeAlso-Service (https://verbundwiki.gbv.de/display/VZG/SeeAlso)
-based on Entity Facts (https://www.dnb.de/EN/Professionell/Metadatendienste/Datenbezug/Entity-Facts/entityFacts_node.html)
-at /seealso/entityfacts/gnd?id={GND]
+As a proof of concept, it provides SeeAlso-Services (https://verbundwiki.gbv.de/display/VZG/SeeAlso)
+based on
+
+* Entity Facts (https://www.dnb.de/EN/Professionell/Metadatendienste/Datenbezug/Entity-Facts/entityFacts_node.html)<br />
+/seealso/entityfacts/gnd?id={GND]
+* OpenDtBio (https://data.deutsche-biographie.de/beta/beacon-open/)<br/>
+/seealso/opendtbio/gnd?id={GND]
 
 Installation
 ------------
 ### Requirements
 
-- PHP 8.1 or higher
+- PHP 8.2 or higher
 
 ### Fetch dependencies
 
