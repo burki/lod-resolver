@@ -11,9 +11,9 @@ As a proof of concept, it provides SeeAlso-Services (https://verbundwiki.gbv.de/
 based on
 
 * Entity Facts (https://www.dnb.de/EN/Professionell/Metadatendienste/Datenbezug/Entity-Facts/entityFacts_node.html)<br />
-/seealso/entityfacts/gnd?id={GND]
+/seealso/entityfacts/gnd?id={GND}
 * OpenDtBio (https://data.deutsche-biographie.de/beta/beacon-open/)<br/>
-/seealso/opendtbio/gnd?id={GND]
+/seealso/opendtbio/gnd?id={GND}
 
 Installation
 ------------
@@ -39,7 +39,7 @@ License
 -------
     Linked Open Data Resolver
 
-    (C) 2024 Daniel Burckhardt
+    (C) 2024-2025 Daniel Burckhardt
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as
