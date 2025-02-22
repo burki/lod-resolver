@@ -1,4 +1,5 @@
 <?php
+
 // src/Controller/SeeAlsoBaseController.php
 
 namespace App\Controller;
@@ -6,9 +7,7 @@ namespace App\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-
 use Symfony\Contracts\HttpClient\HttpClientInterface;
-
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 /**
@@ -16,8 +15,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
  * See
  *  http://data.deutsche-biographie.de/rest/bd/gnd/alle_de
  */
-abstract class SeeAlsoBaseController
-extends AbstractController
+abstract class SeeAlsoBaseController extends AbstractController
 {
     protected $client;
 
@@ -39,7 +37,7 @@ extends AbstractController
             'default', 'if', 'throw', 'delete', 'in', 'try', 'class', 'enum',
             'extends', 'super', 'const', 'export', 'import', 'implements', 'let',
             'private', 'public', 'yield', 'interface', 'package', 'protected',
-            'static', 'null', 'true', 'false'
+            'static', 'null', 'true', 'false',
         ];
 
         return preg_match($identifier_syntax, $subject)
@@ -53,8 +51,11 @@ extends AbstractController
         $callback = $request->query->get('callback');
         if (!empty($callback) && $this->isValidJavaScriptIdentifier($callback)) {
             // return JSONP, see https://en.wikipedia.org/wiki/JSONP
-            $scriptCode = sprintf('%s(%s);',
-                                  $callback, json_encode($result));
+            $scriptCode = sprintf(
+                '%s(%s);',
+                $callback,
+                json_encode($result)
+            );
             $response = new Response($scriptCode);
             $response->headers->set('Content-Type', 'text/javascript');
 

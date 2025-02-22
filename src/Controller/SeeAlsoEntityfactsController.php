@@ -1,4 +1,5 @@
 <?php
+
 // src/Controller/SeeAlsoEntityfactsController.php
 
 namespace App\Controller;
@@ -14,8 +15,7 @@ use Symfony\Component\Routing\Annotation\Route;
  *  https://www.dnb.de/DE/Professionell/Metadatendienste/Datenbezug/Entity-Facts/entityFacts_node.html
  */
 #[Route('/seealso/entityfacts')]
-class SeeAlsoEntityfactsController
-extends SeeAlsoBaseController
+class SeeAlsoEntityfactsController extends SeeAlsoBaseController
 {
     const ENTTITYFACTS_URL = 'https://hub.culturegraph.org/entityfacts';
 
@@ -31,7 +31,7 @@ extends SeeAlsoBaseController
             throw new BadRequestHttpException('You have to provide a (GND) id');
         }
 
-        $url = self::ENTTITYFACTS_URL  . '/' . $id;
+        $url = self::ENTTITYFACTS_URL . '/' . $id;
 
         $clientResponse = $this->client->request('GET', $url);
 

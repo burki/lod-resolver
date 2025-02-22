@@ -1,4 +1,5 @@
 <?php
+
 // src/Controller/SeeAlsoFindbuchController.php
 
 namespace App\Controller;
@@ -7,8 +8,9 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\StreamedResponse;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;;
+;
 
 /**
  * http://beacon.findbuch.de/ no longer works.
@@ -17,8 +19,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;;
  *
  */
 #[Route('/seealso/findbuch')]
-class SeeAlsoFindbuchController
-extends AbstractController
+class SeeAlsoFindbuchController extends AbstractController
 {
     const FINDBUCH_SEEALSO_URL = 'http://beacon.findbuch.de';
 

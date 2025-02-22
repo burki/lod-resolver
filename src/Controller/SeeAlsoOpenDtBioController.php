@@ -1,4 +1,5 @@
 <?php
+
 // src/Controller/SeeAlsoOpenDtBioController.php
 
 namespace App\Controller;
@@ -20,8 +21,7 @@ use Symfony\Component\Routing\Annotation\Route;
  *  jdg / enznz / katdka
  */
 #[Route('/seealso/opendtbio')]
-class SeeAlsoOpenDtBioController
-extends SeeAlsoBaseController
+class SeeAlsoOpenDtBioController extends SeeAlsoBaseController
 {
     const OPENDTBIO_URL = 'https://data.deutsche-biographie.de/rest/bd/gnd/%s/alle_de';
 
@@ -37,7 +37,7 @@ extends SeeAlsoBaseController
             throw new BadRequestHttpException('You have to provide a (GND) id');
         }
 
-        $url = sprintf(self::OPENDTBIO_URL,  $id);
+        $url = sprintf(self::OPENDTBIO_URL, $id);
 
         $clientResponse = $this->client->request('GET', $url);
 
