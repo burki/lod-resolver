@@ -12,16 +12,13 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * Build see also from sameAs links from Entity Facts.
  * See
- *  https://www.dnb.de/DE/Professionell/Metadatendienste/Datenbezug/Entity-Facts/entityFacts_node.html
+ *  https://www.dnb.de/DE/Professionell/Metadatendienste/Datenbezug/Entity-Facts/entityFacts_node.html.
  */
 #[Route('/seealso/entityfacts')]
 class SeeAlsoEntityfactsController extends SeeAlsoBaseController
 {
     const ENTTITYFACTS_URL = 'https://hub.culturegraph.org/entityfacts';
 
-    /**
-     *
-     */
     #[Route('/gnd', name: 'entityfacts-gnd')]
     public function seeAlsoGndAction(Request $request): Response
     {

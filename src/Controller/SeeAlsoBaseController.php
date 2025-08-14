@@ -13,7 +13,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 /**
  * Build see also from sameAs links from OpenDtBio
  * See
- *  http://data.deutsche-biographie.de/rest/bd/gnd/alle_de
+ *  http://data.deutsche-biographie.de/rest/bd/gnd/alle_de.
  */
 abstract class SeeAlsoBaseController extends AbstractController
 {

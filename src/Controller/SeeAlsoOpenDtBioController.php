@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * Build see also from sameAs links from OpenDtBio
  * See
- *  https://data.deutsche-biographie.de/beta/beacon-open/
+ *  https://data.deutsche-biographie.de/beta/beacon-open/.
  *
  * TODO: filter out legacy services in
  *  https://data.deutsche-biographie.de/rest/bd/gnd/alle_de
@@ -25,9 +25,6 @@ class SeeAlsoOpenDtBioController extends SeeAlsoBaseController
 {
     const OPENDTBIO_URL = 'https://data.deutsche-biographie.de/rest/bd/gnd/%s/alle_de';
 
-    /**
-     *
-     */
     #[Route('/gnd', name: 'opendtbio-gnd')]
     public function seeAlsoGndAction(Request $request): Response
     {
