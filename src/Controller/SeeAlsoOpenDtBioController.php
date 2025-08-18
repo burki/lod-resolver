@@ -53,9 +53,15 @@ class SeeAlsoOpenDtBioController extends SeeAlsoBaseController
         $crawler = new Crawler($content);
 
         $seeAlsoId = 'https://d-nb.info/gnd/' . $id;
+        $seeAlsoNames = $seeAlsoDescriptions = $seeAlsoUrls = [];
+
         $deutscheBiographieBase = 'https://www.deutsche-biographie.de/pnd' . $id . '.html';
 
         foreach ($crawler->filterXPath('//TEI/list/item/list/item/ref') as $domElement) {
+            if (!$domElement instanceof \DOMElement) {
+                continue;
+            }
+
             $target = $domElement->getAttribute('target');
             if ('#' == $target[0]) {
                 $target = $deutscheBiographieBase . $target;
