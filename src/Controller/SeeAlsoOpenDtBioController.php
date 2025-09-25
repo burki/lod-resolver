@@ -23,7 +23,7 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('/seealso/opendtbio')]
 class SeeAlsoOpenDtBioController extends SeeAlsoBaseController
 {
-    const OPENDTBIO_URL = 'https://data.deutsche-biographie.de/rest/bd/gnd/%s/alle_de';
+    protected const OPENDTBIO_URL = 'https://data.deutsche-biographie.de/rest/bd/gnd/%s/alle_de';
 
     #[Route('/gnd', name: 'opendtbio-gnd')]
     public function seeAlsoGndAction(Request $request): Response

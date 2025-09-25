@@ -17,7 +17,7 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('/seealso/entityfacts')]
 class SeeAlsoEntityfactsController extends SeeAlsoBaseController
 {
-    const ENTTITYFACTS_URL = 'https://hub.culturegraph.org/entityfacts';
+    protected const ENTTITYFACTS_URL = 'https://hub.culturegraph.org/entityfacts';
 
     #[Route('/gnd', name: 'entityfacts-gnd')]
     public function seeAlsoGndAction(Request $request): Response

@@ -16,7 +16,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 #[Route('/seealso/findbuch')]
 class SeeAlsoFindbuchController extends AbstractController
 {
-    const FINDBUCH_SEEALSO_URL = 'http://beacon.findbuch.de';
+    protected const FINDBUCH_SEEALSO_URL = 'http://beacon.findbuch.de';
 
     #[Route('{path}', name: 'findbuch-proxy', requirements: ['path' => '.+'])]
     public function seeAlsoFindbuchAction(Request $request, $path)
