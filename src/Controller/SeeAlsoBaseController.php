@@ -17,7 +17,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
  */
 abstract class SeeAlsoBaseController extends AbstractController
 {
-    protected $client;
+    protected HttpClientInterface $client;
 
     public function __construct(HttpClientInterface $client)
     {
@@ -44,6 +44,9 @@ abstract class SeeAlsoBaseController extends AbstractController
             && !in_array(mb_strtolower($subject, 'UTF-8'), $reserved_words);
     }
 
+    /**
+     * @param mixed[] $result associative array which will be json-encoded
+     */
     protected function buildJsonResponse(Request $request, array $result): Response
     {
         // https://github.com/gbv/seealso/blob/master/htdocs/seealso.js

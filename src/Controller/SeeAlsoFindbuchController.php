@@ -5,6 +5,7 @@
 namespace App\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
@@ -19,7 +20,7 @@ class SeeAlsoFindbuchController extends AbstractController
     protected const FINDBUCH_SEEALSO_URL = 'http://beacon.findbuch.de';
 
     #[Route('{path}', name: 'findbuch-proxy', requirements: ['path' => '.+'])]
-    public function seeAlsoFindbuchAction(Request $request, $path)
+    public function seeAlsoFindbuchAction(Request $request, string $path): JsonResponse
     {
         throw $this->createNotFoundException(self::FINDBUCH_SEEALSO_URL . ' no longer works');
     }
