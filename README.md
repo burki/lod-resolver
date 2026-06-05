@@ -19,7 +19,7 @@ Installation
 ------------
 ### Requirements
 
-- PHP 8.2 or higher
+- PHP 8.4.1 or higher
 
 ### Fetch dependencies
 
@@ -39,7 +39,7 @@ License
 -------
     Linked Open Data Resolver
 
-    (C) 2024-2025 Daniel Burckhardt
+    (C) 2024-2026 Daniel Burckhardt
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as
